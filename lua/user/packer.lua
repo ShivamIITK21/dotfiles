@@ -6,7 +6,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.5',
 	  -- or                            , branch = '0.1.x',
@@ -31,7 +30,7 @@ return require('packer').startup(function(use)
 		  --- Uncomment the two plugins below if you want to manage the language servers from neovim
 		  --- and read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
 		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
+		  {'williamboman/mason-lspconfig.nvim', tag=" v1.32.0"},
 
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},
@@ -53,5 +52,7 @@ return require('packer').startup(function(use)
       branch = "harpoon2",
       requires = { {"nvim-lua/plenary.nvim"} }
   }
+
+
 end)
 
