@@ -46,13 +46,18 @@ return require('packer').startup(function(use)
       config = function() require("nvim-autopairs").setup {} end
   }
 
-  use "nvim-lua/plenary.nvim" 
+  use "nvim-lua/plenary.nvim"
   use {
       "ThePrimeagen/harpoon",
       branch = "harpoon2",
       requires = { {"nvim-lua/plenary.nvim"} }
   }
 
+  use {
+      "scalameta/nvim-metals",
+       tag = "v0.10.x",
+       requires = {{'nvim-lua/plenary.nvim'}},
+  }
 
 end)
 
